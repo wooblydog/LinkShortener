@@ -1,13 +1,9 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    // Ваш код для обработки полученной строки $url
-
     $long_url = $_POST['floatingInput'];
     $new_url = search_or_create($long_url);
     echo $new_url;
-
-    // Отправка ответа обратно клиенту
 }
 
 function search_or_create($long_url)
